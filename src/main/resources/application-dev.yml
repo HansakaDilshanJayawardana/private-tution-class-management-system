@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: PRIVATE-TUTION-CLASS-MANAGEMENT-SYSTEM
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/private_tution_class_management_system
+    username: root
+    password: H@nsaka0308
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+  liquibase:
+    change-log: classpath:changelog/db.changelog-master.xml
+server:
+  port: 9092
+
+

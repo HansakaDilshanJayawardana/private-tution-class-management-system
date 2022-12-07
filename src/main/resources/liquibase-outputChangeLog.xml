@@ -1,0 +1,39 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-3.8.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet author="Hansaka (generated)" id="1666090605466-1">
+        <createTable tableName="private_tution_class_management_system_test">
+            <column autoIncrement="true" name="test_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="test_column" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="Hansaka (generated)" id="1666090605466-2">
+        <createTable tableName="private_tution_class_management_system_test_aud">
+            <column name="test_id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="rev" type="INT">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="revtype" type="TINYINT(3)"/>
+            <column name="test_column" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="Hansaka (generated)" id="1666090605466-3">
+        <createTable tableName="revinfo">
+            <column autoIncrement="true" name="rev" type="INT">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="revtstmp" type="BIGINT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="Hansaka (generated)" id="1666090605466-4">
+        <createIndex indexName="FK4tb2sf4yttcjp0ge2hjfyoslf" tableName="private_tution_class_management_system_test_aud">
+            <column name="rev"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="Hansaka (generated)" id="1666090605466-5">
+        <addForeignKeyConstraint baseColumnNames="rev" baseTableName="private_tution_class_management_system_test_aud" constraintName="FK4tb2sf4yttcjp0ge2hjfyoslf" deferrable="false" initiallyDeferred="false" onDelete="RESTRICT" onUpdate="RESTRICT" referencedColumnNames="rev" referencedTableName="revinfo" validate="true"/>
+    </changeSet>
+</databaseChangeLog>
