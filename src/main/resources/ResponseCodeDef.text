@@ -1,4 +1,8 @@
 1) 001 : "Test Record Creation Succeeded!"
 2) 002 : "Test Record Creation Failed!"
-3)
-4)
+3) 003 : "Subject Creation Succeeded!"
+4) 004 : "Subject Creation Failed!"
+5) 005 : "Subjects Retrieval Succeeded!"
+6) 006 : "Subjects Retrieval Failed!"
+7) 007 : "Subject Update Succeeded!"
+8) 008 : "Subject Update Failed!"
