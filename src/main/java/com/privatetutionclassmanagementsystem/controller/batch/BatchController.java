@@ -28,11 +28,11 @@ public class BatchController {
         try{
             Batch batch = batchService.createBatchRecord(batchDto);
             responseDto.setMessage("Batch Creation Succeeded!");
-            responseDto.setCode("009");
+            responseDto.setCode("011");
             responseDto.setResultData(batch);
         }catch (Exception e){
             responseDto.setMessage("Batch Creation Failed!");
-            responseDto.setCode("010");
+            responseDto.setCode("012");
             responseDto.setValidity(false);
             responseDto.setErrorData(e.getMessage());
             return new ResponseEntity<>(responseDto, HttpStatus.INTERNAL_SERVER_ERROR);
@@ -47,11 +47,11 @@ public class BatchController {
         try{
             List<Batch> batchList = batchService.getAllBatchRecords(isCurrent);
             responseDto.setMessage("Batches Retrieval Succeeded!");
-            responseDto.setCode("011");
+            responseDto.setCode("013");
             responseDto.setResultData(batchList);
         }catch (Exception e){
             responseDto.setMessage("Batches Retrieval Failed!");
-            responseDto.setCode("012");
+            responseDto.setCode("014");
             responseDto.setValidity(false);
             responseDto.setErrorData(e.getMessage());
             return new ResponseEntity<>(responseDto, HttpStatus.INTERNAL_SERVER_ERROR);
@@ -67,11 +67,11 @@ public class BatchController {
         try{
             Batch batch = batchService.updateBatchRecord(batchCode, batchUpdateDto);
             responseDto.setMessage("Batch Update Succeeded!");
-            responseDto.setCode("013");
+            responseDto.setCode("015");
             responseDto.setResultData(batch);
         }catch (Exception e){
             responseDto.setMessage("Batch Update Failed!");
-            responseDto.setCode("014");
+            responseDto.setCode("016");
             responseDto.setValidity(false);
             responseDto.setErrorData(e.getMessage());
             return new ResponseEntity<>(responseDto, HttpStatus.INTERNAL_SERVER_ERROR);
@@ -86,10 +86,10 @@ public class BatchController {
         try{
             batchService.deleteBatchRecord(batchCode);
             responseDto.setMessage("Batch Deletion Succeeded!");
-            responseDto.setCode("015");
+            responseDto.setCode("017");
         }catch (Exception e){
             responseDto.setMessage("Batch Deletion Failed!");
-            responseDto.setCode("016");
+            responseDto.setCode("018");
             responseDto.setValidity(false);
             responseDto.setErrorData(e.getMessage());
             return new ResponseEntity<>(responseDto, HttpStatus.INTERNAL_SERVER_ERROR);
